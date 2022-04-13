@@ -16,20 +16,32 @@ import {
 
 export default function Library() {
 
-    const [filesCid, setFilesCID] = useState([])
+    const [filesCID, setFilesCID] = useState([])
+    const [cid, setCID] = useState()
+
 
     useEffect(() => {
         //get CID from smartcontract
         //store them as array
-        //itireate over the cide
+        //itireate over the cid
         //use ipfs get method to get each file
         //display in the filed
         //to use javascript map
     })
+
+    const onSearch = (e) => {
+        e.preventDefault()
+
+        let filteredCID = filesCID.filter(cid => {
+            return cid === e.target.value
+        })
+
+        setFilesCID(filteredCID)
+    }
+
     return (
         <div>
-            <SearchField />
-        
+            <SearchField onSearch={onSearch} cid={cid}/>
             <div style={{margin: 50}}>
                 
                 <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
