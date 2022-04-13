@@ -3,13 +3,13 @@ import {
     MDBCard,
     MDBCardBody,
     MDBCardFooter,
-    MDBCardHeader,
+    MDBBtn,
     MDBCardImage,
     MDBCol,
     MDBRow,
     MDBCardTitle,
     MDBCardText,
-    MDBCardGroup,
+    MDBIcon,
     MDBCardLink,
 } from 'mdb-react-ui-kit';
 
@@ -32,6 +32,14 @@ export default function Library() {
                         </MDBCardBody>
                         <MDBCardFooter>
                             <small className='text-muted'>#author, #genre</small>
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }} href='#'>
+                                <MDBIcon fab icon='facebook-f' />
+                            </MDBBtn>
+
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#55acee' }} href='#'>
+                                <MDBIcon fab icon='twitter' />
+                            </MDBBtn>
+
                         </MDBCardFooter>
                     </MDBCard>
                 </MDBCol>
