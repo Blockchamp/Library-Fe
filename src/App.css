@@ -1,6 +1,9 @@
 .App {
     text-align: center;
+    background-color: rgb(235, 235, 235);
   }
+
+
   
   .App-logo {
     height: 40vmin;
@@ -28,10 +31,23 @@
     color: #61dafb;
   }
   
+/* STYLING FOOTER */
+#footerbg{
+  background-color: rgb(92, 2, 92);
+  color: white;
+}
 
-#footerbg{background-color: blue ; color: white;}
+#headerbg{
+  color: white;
+  padding: 3px;
+}
 
-#headerbg{color: white;}
+
+/* STYLING NAVBAR */
+
+.navbar {
+  background-color: rgb(92, 2, 92);
+}
 
 @keyframes App-logo-spin {
   from {

@@ -13,12 +13,9 @@
     "ethers": "^5.6.1",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
-<<<<<<< HEAD
     "ipfs-api": "^26.1.2",
     "ipfs-core": "^0.14.2",
-=======
     "mdb-react-ui-kit": "^3.0.0",
->>>>>>> 2c3cd3c0597d154bbd15ae3a44444838afc397b1
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.3",
     "react-dom": "^17.0.2",
