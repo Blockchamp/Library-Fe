@@ -30,8 +30,9 @@ export default function Library() {
                                 Book Description
                             </MDBCardText>
                         </MDBCardBody>
+
+                        {/* Social sharing links */}
                         <MDBCardFooter>
-                            <small className='text-muted'>#author, #genre</small>
                             <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }} href='#'>
                                 <MDBIcon fab icon='facebook-f' />
                             </MDBBtn>
@@ -39,7 +40,13 @@ export default function Library() {
                             <MDBBtn className='m-1' style={{ backgroundColor: '#55acee' }} href='#'>
                                 <MDBIcon fab icon='twitter' />
                             </MDBBtn>
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#ac2bac' }} href='#'>
+                                <MDBIcon fab icon='instagram' />
+                            </MDBBtn>
 
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#0082ca' }} href='#'>
+                                <MDBIcon fab icon='linkedin-in' />
+                            </MDBBtn>
                         </MDBCardFooter>
                     </MDBCard>
                 </MDBCol>
@@ -56,8 +63,23 @@ export default function Library() {
                                 Book Description
                             </MDBCardText>
                         </MDBCardBody>
+
+                         {/* Social sharing links */}
                         <MDBCardFooter>
-                            <small className='text-muted'>#author, #genre</small>
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }} href='#'>
+                                <MDBIcon fab icon='facebook-f' />
+                            </MDBBtn>
+
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#55acee' }} href='#'>
+                                <MDBIcon fab icon='twitter' />
+                            </MDBBtn>
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#ac2bac' }} href='#'>
+                                <MDBIcon fab icon='instagram' />
+                            </MDBBtn>
+
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#0082ca' }} href='#'>
+                                <MDBIcon fab icon='linkedin-in' />
+                            </MDBBtn>
                         </MDBCardFooter>
                     </MDBCard>
                 </MDBCol>
@@ -74,12 +96,27 @@ export default function Library() {
                                 Book Description
                             </MDBCardText>
                         </MDBCardBody>
+
+                        {/* Social sharing links */}
                         <MDBCardFooter>
-                            <small className='text-muted'>#author, #genre</small>
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }} href='#'>
+                                <MDBIcon fab icon='facebook-f' />
+                            </MDBBtn>
+
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#55acee' }} href='#'>
+                                <MDBIcon fab icon='twitter' />
+                            </MDBBtn>
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#ac2bac' }} href='#'>
+                                <MDBIcon fab icon='instagram' />
+                            </MDBBtn>
+
+                            <MDBBtn className='m-1' style={{ backgroundColor: '#0082ca' }} href='#'>
+                                <MDBIcon fab icon='linkedin-in' />
+                            </MDBBtn>
                         </MDBCardFooter>
                     </MDBCard>
                 </MDBCol>
             </MDBRow>
-        </div>
+        </div >
     );
 }
