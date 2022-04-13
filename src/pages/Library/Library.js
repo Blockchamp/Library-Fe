@@ -15,7 +15,7 @@ import {
 
 export default function Library() {
     return (
-        <div>
+        <div style={{margin: 50}}>
             <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
                 <MDBCol>
                     <MDBCard className='h-100'>
