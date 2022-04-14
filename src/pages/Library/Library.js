@@ -24,6 +24,7 @@ export default function Library() {
   const [filesCID, setFilesCID] = useState([]);
   const [cid, setCID] = useState();
   const [data, setData] = useState([]);
+  const [data2, setData2] = useState([]);
 
   useEffect(() => {
     getData();
@@ -49,6 +50,7 @@ export default function Library() {
 
         console.log(publicData);
         setData(publicData);
+        setData2(publicData);
 
         //setStacked(Number(BigNumber.from(tokenStaked).toString()) / 10 ** 18);
         //setToken(Number(BigNumber.from(tokenBalance).toString()) / 10 ** 18);
@@ -61,14 +63,19 @@ export default function Library() {
     }
   };
 
-  const onSearch = (e) => {
-    e.preventDefault();
+  const onSearch = (text) => {
+    console.log(data);
 
-    let filteredCID = filesCID.filter((cid) => {
-      return cid === e.target.value;
+    const filterData = data.filter((item) => {
+      return (
+        item[2].toLowerCase().includes(text.toLowerCase()) ||
+        item[3].toLowerCase().includes(text.toLowerCase())
+      );
     });
-
-    setFilesCID(filteredCID);
+    setData(filterData);
+    if (text === "") {
+      setData(data2);
+    }
   };
 
   return (
@@ -99,7 +106,7 @@ export default function Library() {
                     <MDBBtn
                       className="m-1"
                       style={{ backgroundColor: "#3b5998" }}
-                      href="#"
+                      href={`https://www.facebook.com/sharer.php?u=${`https://ipfs.io/ipfs/${item[0]}/${item[2]}`}`}
                     >
                       <MDBIcon fab icon="facebook-f" />
                     </MDBBtn>
@@ -107,24 +114,16 @@ export default function Library() {
                     <MDBBtn
                       className="m-1"
                       style={{ backgroundColor: "#55acee" }}
-                      href="#"
+                      href={`https://twitter.com/share?text=check it out - ${`https://ipfs.io/ipfs/${item[0]}/${item[2]}`}`}
                     >
                       <MDBIcon fab icon="twitter" />
                     </MDBBtn>
                     <MDBBtn
                       className="m-1"
                       style={{ backgroundColor: "#ac2bac" }}
-                      href="#"
+                      href={`whatsapp://send?text=Support me on trendupp.com, check it out - ${`https://ipfs.io/ipfs/${item[0]}/${item[2]}`}`}
                     >
-                      <MDBIcon fab icon="instagram" />
-                    </MDBBtn>
-
-                    <MDBBtn
-                      className="m-1"
-                      style={{ backgroundColor: "#0082ca" }}
-                      href="#"
-                    >
-                      <MDBIcon fab icon="linkedin-in" />
+                      <MDBIcon fab icon="whatsapp" />
                     </MDBBtn>
                   </MDBCardFooter>
                 </MDBCard>

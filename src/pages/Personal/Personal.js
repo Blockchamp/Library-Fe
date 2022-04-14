@@ -24,6 +24,7 @@ export default function Personal() {
   const [filesCID, setFilesCID] = useState([]);
   const [cid, setCID] = useState();
   const [data, setData] = useState([]);
+  const [data2, setData2] = useState([]);
 
   useEffect(() => {
     getData();
@@ -55,6 +56,7 @@ export default function Personal() {
         );
 
         setData(privateData);
+        setData2(privateData);
         //setStacked(Number(BigNumber.from(tokenStaked).toString()) / 10 ** 18);
         //setToken(Number(BigNumber.from(tokenBalance).toString()) / 10 ** 18);
         //setLoading(false);
@@ -66,14 +68,19 @@ export default function Personal() {
     }
   };
 
-  const onSearch = (e) => {
-    e.preventDefault();
+  const onSearch = (text) => {
+    console.log(data);
 
-    let filteredCID = filesCID.filter((cid) => {
-      return cid === e.target.value;
+    const filterData = data.filter((item) => {
+      return (
+        item[2].toLowerCase().includes(text.toLowerCase()) ||
+        item[3].toLowerCase().includes(text.toLowerCase())
+      );
     });
-
-    setFilesCID(filteredCID);
+    setData(filterData);
+    if (text === "") {
+      setData(data2);
+    }
   };
 
   return (
