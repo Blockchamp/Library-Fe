@@ -147,14 +147,16 @@ const NavBar = () => {
               {walletConnected && address.length > 0 ? (
                 <button
                   onClick={disconnectWallet}
-                  className="button-2 w-button bg-success"
+                  className="button-2 w-button"
+                  style={{ borderRadius: "5px", border: "none" }}
                 >
                   {address.slice(0, 5) + "....." + address.slice(-5, -1)}
                 </button>
               ) : (
                 <button
                   onClick={connectWallet}
-                  className="button-2 w-button bg-success"
+                  className="button-2 w-button"
+                  style={{ borderRadius: "5px", border: "none" }}
                 >
                   Connect Wallet
                 </button>
