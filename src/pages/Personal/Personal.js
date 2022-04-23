@@ -16,7 +16,7 @@ import {
   MDBCardLink,
 } from "mdb-react-ui-kit";
 
-export default function Library() {
+export default function Personal() {
   const fileStorageContractAddress =
     "0x942E216eA1a697c77163bc13d897Cd3Fc9f763E2";
   const fileStoragecontractABI = fileStorage.abi;
@@ -34,6 +34,10 @@ export default function Library() {
     try {
       const { ethereum } = window;
 
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+
       if (ethereum) {
         //setLoading(true);
         const provider = new ethers.providers.Web3Provider(ethereum);
@@ -44,14 +48,15 @@ export default function Library() {
           signer
         );
 
-        const publicData = await fileStorageContract.retrievePublic({
-          gasLimit: 300000,
-        });
+        const privateData = await fileStorageContract.retrievePrivate(
+          accounts[0],
+          {
+            gasLimit: 300000,
+          }
+        );
 
-        console.log(publicData);
-        setData(publicData);
-        setData2(publicData);
-
+        setData(privateData);
+        setData2(privateData);
         //setStacked(Number(BigNumber.from(tokenStaked).toString()) / 10 ** 18);
         //setToken(Number(BigNumber.from(tokenBalance).toString()) / 10 ** 18);
         //setLoading(false);
